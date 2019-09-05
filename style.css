@@ -1,0 +1,136 @@
+body {
+	padding: 20px;
+	background-color: gainsboro;
+}
+
+#container {
+	width: 380px;
+	margin: 0 auto;
+}
+
+#header {
+	width: 380px;
+    height:200px;
+	background-image: url('header.jpg');
+	border: 2px solid black;
+	border-radius: 15px 15px 0 0;
+	position: relative;
+}
+
+.clear-and-refresh {
+    height: 30px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.clear-and-refresh i {
+    font-size: 30px;
+    color: white;
+}
+
+.clear-and-refresh i:hover {
+    cursor: pointer;
+    text-shadow: 1px 3px 5px #000;
+    transform: rotate(45deg);
+}
+
+label {
+	color: white;
+	box-sizing: border-box;
+	margin: 0;
+	width: 90px;
+}
+
+#content {
+	min-height: 400px;
+	position: relative;
+	background-color: lightgreen;
+	border: 2px solid black;
+	border-radius: 0 0 15px 15px;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.item * {
+	display: inline-block;
+}
+
+.item {
+	background: orange;
+	min-height: 30px;
+	border: 1px solid ghostwhite;
+	position: relative;
+}
+
+.glyphicon:hover {
+	cursor: pointer;
+}
+
+.item .glyphicon-trash {
+	position: absolute;
+	top: 7px;
+	right: 10px;
+}
+
+.item .glyphicon-trash:hover {
+	color: red;
+	font-size: 1.1em;
+}
+
+
+.item .glyphicon-unchecked, 
+.item .glyphicon-check {
+	position: absolute;
+	top: 5px;
+	left: 10px;
+}
+
+.item .glyphicon-check {
+	color: gray;
+}
+
+.item p {
+	position: absolute;
+	top: 3px;
+	left: 40px;
+	margin: 0;
+	max-width: 320px;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+.item p.del {
+	text-decoration: line-through;
+	color: gray;
+}
+
+#add-item {
+	position: absolute;
+	left: 15px;
+	bottom: 20px;
+	width: 350px;
+	height: 26px;
+}
+
+#input {
+	box-sizing: border-box;
+	width: 326px;
+	height: 26px;
+}
+
+#addbtn {
+	position: absolute;
+	font-size: 20px;
+	left: 332px;
+	top: 3px;
+	color: green;
+}
+
+.for-list {
+	padding-bottom: 66px;
+}
