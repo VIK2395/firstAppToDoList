@@ -95,13 +95,12 @@ ul {
 }
 
 .item p {
-	position: absolute;
-	top: 3px;
+	position: relative;
 	left: 40px;
-	margin: 0;
-	max-width: 320px;
+	margin-top: 4px;
+	margin-bottom: 7px;
+	max-width: 300px;
 	overflow-x: auto;
-	overflow-y: hidden;
 }
 
 .item p.del {

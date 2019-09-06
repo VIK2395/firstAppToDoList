@@ -4,10 +4,6 @@ let addbtn = document.getElementById("addbtn"),
 	list = document.getElementById("list"),
 	clearAndRefresh = document.getElementById("clearAndRefresh");
 
-// При запуску першим ділом провіряєм localStorage
-// if (localStorage.getItem("toDoList")) {console.log(localStorage.getItem("toDoList"))}
-// if (localStorage.getItem("toDoList") !== null) {
-
 if (localStorage.getItem("toDoList") !== null) {
 	let toDoList = [];
 		toDoList = JSON.parse(localStorage.getItem("toDoList"));
@@ -41,18 +37,20 @@ function addItem () {
 	}
 }
 
-function saveToLocalStorage () { //ВИХЫД НЕОБХІДНО ПЕРЕЗАПИСУВАТИ ВВЕСЬ ЛІСТ І ВСЕ
+function saveToLocalStorage () {
 	let toDoList = [],
 		items = list.querySelectorAll("li");
-		for (let i=0; i<items.length; i++) {
-			let itemObject = {};
-				itemObject.task = items[i].innerText;
+		if (items.length!==0) {
+			for (let i=0; i<items.length; i++) {
+				let itemObject = {};
+					itemObject.task = items[i].innerText;
 
-				if (items[i].querySelector("i").classList.contains("glyphicon-unchecked")) {
-					itemObject.iconClass = "glyphicon-unchecked"} else {itemObject.iconClass = "glyphicon-check"};
-				toDoList.push(itemObject);
-		}
-	localStorage.setItem("toDoList", JSON.stringify(toDoList));
+					if (items[i].querySelector("i").classList.contains("glyphicon-unchecked")) {
+						itemObject.iconClass = "glyphicon-unchecked"} else {itemObject.iconClass = "glyphicon-check"};
+					toDoList.push(itemObject);
+			}
+		localStorage.setItem("toDoList", JSON.stringify(toDoList));
+		} else localStorage.clear();
 }
 
 document.addEventListener("keyup", btnEnterClick, false);
