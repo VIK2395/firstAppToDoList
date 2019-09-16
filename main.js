@@ -8,7 +8,7 @@ if (localStorage.getItem("toDoList") !== null) {
 	let toDoList = [];
 		toDoList = JSON.parse(localStorage.getItem("toDoList"));
 		for (let i=0; i<toDoList.length; i++) {
-		let pTagStyle = function (){
+			let pTagStyle = function (){
 						if (toDoList[i].iconClass === "glyphicon-check") return "del";
 			};
 
